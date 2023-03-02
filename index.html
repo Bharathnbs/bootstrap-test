@@ -167,7 +167,7 @@
                     </div>  
                 </div>
 
-                <div class="card" style="margin-top: 10px; height: 510px;">
+                <div class="card" style="margin-top: 10px; height: auto;">
                     <div class="d-flex m-2">
                         <img src="./images/avator.png" alt="avator" width="50px" height="50px" class="" style="margin-right: 20px;">
                         <div>
@@ -175,44 +175,107 @@
                             <p class="card-text" style="font-size: smaller; margin-top: -5px;">Junior software developer</p>        
                         </div>
                     </div>
-                    <div style="max-height: 350px;">
-                        <img src="./images/post.jfif" class="card-img-top" style="height: 100%; width: 100%; object-fit: contain;">
+
+                    <div >
+                        <img src="./images/post.jfif" class="card-img-top" style="height: 300px; width: 100%; object-fit: contain;">
                     </div>
+
                     <hr style="margin-left: 20px; margin-right: 20px;">
-                    <div id="like" class="d-none shadow-sm rounded" style="position: absolute; top: 80%; left:30px; background: white;">
-                        <a href=""><img src="./images/icon/Linkedin-Like-Icon-Thumbup250.png" width="30px" height="30px" class="m-2 reaction"></a>
-                        <a href=""><img src="./images/icon/Linkedin-Celebrate-Icon-ClappingHands250.png"  width="30px" height="30px" class="ml-1 m-2 reaction"></a>
-                        <a href=""><img src="./images/icon/Linkedin-Support-Icon-HeartinHand250.png"  width="30px" height="30px" class="ml-1 m-2 reaction"></a>
-                        <a href=""><img src="./images/icon/Linkedin-Love-Icon-Heart250.png"  width="30px" height="30px" class="ml-1 m-2 reaction"></a>
-                        <a href=""><img src="./images/icon/Linkedin-Insightful-Icon-Lamp250.png"  width="30px" height="30px" class="ml-1 m-2 reaction"></a>
-                        <a href=""><img src="./images/icon/linkedin-funny-emoticon-250.png"  width="30px" height="30px" class="ml-1 m-2 reaction"></a>
+
+                    <div id="like" class="d-none shadow-sm rounded" style="position: absolute; top: 78%; left:30px; background: white;">
+                        <div id="shake">
+                            <a class="like" href="#"><img src="./images/icon/Linkedin-Like-Icon-Thumbup250.png" width="30px" height="30px" class="m-2 reaction"></a>
+                            <a class="clapping" href="#"><img src="./images/icon/Linkedin-Celebrate-Icon-ClappingHands250.png"  width="30px" height="30px" class="ml-1 m-2 reaction"></a>
+                            <a class="heart" href="#"><img src="./images/icon/Linkedin-Support-Icon-HeartinHand250.png"  width="30px" height="30px" class="ml-1 m-2 reaction"></a>
+                            <a class="love" href="#"><img src="./images/icon/Linkedin-Love-Icon-Heart250.png"  width="30px" height="30px" class="ml-1 m-2 reaction"></a>
+                            <a class="insightful" href="#"><img src="./images/icon/Linkedin-Insightful-Icon-Lamp250.png"  width="30px" height="30px" class="ml-1 m-2 reaction"></a>
+                            <a class="funny"  href="#"><img src="./images/icon/linkedin-funny-emoticon-250.png"  width="30px" height="30px" class="ml-1 m-2 reaction"></a>
+                        </div>
                     </div>
-                    <div class="d-flex justify-content-center ml-3 mr-3 mb-5">                   
-                        <button  id="likes" style="border: none; background: none;">
+                    <div class=" d-flex justify-content-center ml-3 mr-3">                   
+                        <button class="likes"  id="likes" style="border: none; background: none;" onclick="imgLike()" target="false">
                             <div class="col d-flex icons justify-content-center" style="align-items: center; padding-top: 10px; padding-bottom: 10px;">
-                                <img src="./images/icon/like.png" alt="like" height="20px" width="20px" class="">
-                                <p class="ml-1" style="margin-bottom: -0.3px;">Like</p>
+                                <img id="imglike" src="./images/icon/like.png" alt="like" height="20px" width="20px" >
+                                <!-- <i class="icon ion-ios-thumbs-up" style="width: 20px; color: blue; height: 20px; background-color: black;"></i> -->
+                                <p id="textlike" class="ml-1 d-none d-sm-none d-md-block" style="margin-bottom: -0.3px;">Like</p>
                             </div>      
                         </button>
 
                         <button style="border: none; background: none;">
                             <div class=" d-flex icons justify-content-center" style="align-items: center; padding-top: 10px; padding-bottom: 10px;">
                                 <img src="./images/icon/chat-box.png" alt="like" height="30px" width="30px" >
-                                <p class="ml-1"  style="margin-bottom: -0.3px;">Comment</p>
+                                <p class="ml-1 d-none d-sm-none d-md-block"  style="margin-bottom: -0.3px;">Comment</p>
                             </div>
                         </button>
 
                         <button  style="border: none; background: none;">
                             <div class="col d-flex icons justify-content-center" style="align-items: center; padding-top: 10px; padding-bottom: 10px;">
                                 <img src="./images/icon/repeat-button.png" alt="like" height="20px" width="20px">
-                                <p class="ml-1" style="margin-bottom: -0.3px;">Repost</p>
+                                <p class="ml-1 d-none d-sm-none d-md-block" style="margin-bottom: -0.3px;">Repost</p>
                             </div>
                         </button>
 
                         <button style="border: none; background: none;">
                             <div class="col d-flex icons justify-content-center"style="align-items: center; padding-top: 10px; padding-bottom: 10px;">
                                 <img src="./images/icon/direct-instagram.png" alt="like" height="20px" width="20px">
-                                <p class="ml-1" style="margin-bottom: -0.3px;">Send</p>
+                                <p class="ml-1 d-none d-sm-none d-md-block" style="margin-bottom: -0.3px;">Send</p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+             
+                <div class="card" style="margin-top: 10px; height: auto;">
+                    <div class="d-flex m-2">
+                        <img src="./images/avator.png" alt="avator" width="50px" height="50px" class="" style="margin-right: 20px;">
+                        <div>
+                            <h5 class="card-title" style="font-size: small; font-weight: 700;">Bharath N</h5>
+                            <p class="card-text" style="font-size: smaller; margin-top: -5px;">Junior software developer</p>        
+                        </div>
+                    </div>
+
+                   <div class="">
+                        <img src="./images/former.jfif" class="card-img-top" style="height: 100%; width: 100%; object-fit: contain;">
+                   </div>
+
+                    <hr style="margin-left: 20px; margin-right: 20px;">
+
+                    <div id="likeone" class="d-none shadow-sm rounded " style="position: absolute; top: 83%; left:10px;  background: white;">
+                        <div id="shake">   
+                            <a href=""><img src="./images/icon/Linkedin-Like-Icon-Thumbup250.png" width="30px" height="30px" class="m-2 reaction"></a>
+                            <a href=""><img src="./images/icon/Linkedin-Celebrate-Icon-ClappingHands250.png"  width="30px" height="30px" class="ml-1 m-2 reaction"></a>
+                            <a href=""><img src="./images/icon/Linkedin-Support-Icon-HeartinHand250.png"  width="30px" height="30px" class="ml-1 m-2 reaction"></a>
+                            <a href=""><img src="./images/icon/Linkedin-Love-Icon-Heart250.png"  width="30px" height="30px" class="ml-1 m-2 reaction"></a>
+                            <a href=""><img src="./images/icon/Linkedin-Insightful-Icon-Lamp250.png"  width="30px" height="30px" class="ml-1 m-2 reaction"></a>
+                            <a href=""><img src="./images/icon/linkedin-funny-emoticon-250.png"  width="30px" height="30px" class="ml-1 m-2 reaction"></a>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center ml-3 mr-3 " >                   
+                        <button  id="likesone" style="border: none; background: none;" onclick="imgLikeone()" target="false" >
+                            <div class="col d-flex icons justify-content-center" style="align-items: center; padding-top: 10px; padding-bottom: 10px;">
+                                <img id="imglikeone" src="./images/icon/like.png" alt="like" height="20px" width="20px" class="imglike">
+                                <!-- <i class="icon ion-ios-thumbs-up" style="width: 20px; color: blue; height: 20px; background-color: black;"></i> -->
+                                <p id="textlikeone" class="ml-1 d-none d-sm-none d-md-block textlike" style="margin-bottom: -0.3px;">Like</p>
+                            </div>      
+                        </button>
+
+                        <button style="border: none; background: none;">
+                            <div class=" d-flex icons justify-content-center" style="align-items: center; padding-top: 10px; padding-bottom: 10px;" >
+                                <img src="./images/icon/chat-box.png" alt="like" height="30px" width="30px" >
+                                <p class="ml-1 d-none d-sm-none d-md-block"  style="margin-bottom: -0.3px;">Comment</p>
+                            </div>
+                        </button>
+
+                        <button  style="border: none; background: none;">
+                            <div class="col d-flex icons justify-content-center" style="align-items: center; padding-top: 10px; padding-bottom: 10px;">
+                                <img src="./images/icon/repeat-button.png" alt="like" height="20px" width="20px">
+                                <p class="ml-1 d-none d-sm-none d-md-block" style="margin-bottom: -0.3px;">Repost</p>
+                            </div>
+                        </button>
+
+                        <button style="border: none; background: none;">
+                            <div class="col d-flex icons justify-content-center"style="align-items: center; padding-top: 10px; padding-bottom: 10px;">
+                                <img src="./images/icon/direct-instagram.png" alt="like" height="20px" width="20px">
+                                <p class="ml-1 d-none d-sm-none d-md-block" style="margin-bottom: -0.3px;">Send</p>
                             </div>
                         </button>
                     </div>
@@ -252,6 +315,12 @@
         const nav = document.getElementById("nav");
         const likes = document.getElementById("likes");
         const like = document.getElementById("like");
+        const imglike = document.getElementById("imglike");
+        const textLike = document.getElementById("textlike");
+        const likesone = document.getElementById("likesone");
+        const likeone = document.getElementById("likeone");
+        const imglikeone = document.getElementById("imglikeone");
+        const textLikeone = document.getElementById("textlikeone");
 
         // search bar function logic
 
@@ -311,8 +380,50 @@
         like.addEventListener("mouseleave", ()=>{
             like.classList.add("d-none");
         });
+
+
+        likesone.addEventListener("mouseenter", ()=>{
+            likeone.classList.remove("d-none");
+        });
+
+        likeone.addEventListener("mouseenter", ()=>{
+            likeone.classList.remove("d-none");
+        });
+
+        likesone.addEventListener("mouseleave", ()=>{
+            likeone.classList.add("d-none");
+        });
+
+        likeone.addEventListener("mouseleave", ()=>{
+            likeone.classList.add("d-none");
+        });
         //end
 
+         imgLike =() => {
+            let a = likes.getAttribute("target");
+            if(a == "false"){
+                imglike.src="./images/icon/like (1).png";
+                textLike.style.color = "blue";
+                likes.setAttribute("target", "true");
+            } else {
+                imglike.src="./images/icon/like.png";
+                textLike.style.color = "black";
+                likes.setAttribute("target", "false");
+            }
+        }
+
+        imgLikeone =() => {
+            let a = likesone.getAttribute("target");
+            if(a == "false"){
+                imglikeone.src="./images/icon/like (1).png";
+                textLikeone.style.color = "blue";
+                likesone.setAttribute("target", "true");
+            } else {
+                imglikeone.src="./images/icon/like.png";
+                textLikeone.style.color = "black";
+                likesone.setAttribute("target", "false");
+            }
+        }
 
     </script>
     </body>
